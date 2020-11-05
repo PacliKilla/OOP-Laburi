@@ -17,18 +17,16 @@ public class Main {
 
                     symbolStack.push(currentSymbol);
                     break;
-
                 case ')':
-
                     if (!symbolStack.isEmpty()) {
                         char symbolStackTop = symbolStack.pop();
                         if (currentSymbol == ')' && symbolStackTop != '(')
                                  {
-                            System.out.println("Unmatched closing bracket while parsing "  );
+                            System.out.println("Unmatched closing bracket "  );
                             return;
                         }
                     } else {
-                        System.out.println("Extra closing bracket while parsing ");
+                        System.out.println("Extra closing bracket ");
                         return;
                     }
                     break;
@@ -37,7 +35,7 @@ public class Main {
             }
         }
         if (!symbolStack.isEmpty())
-            System.out.println("Insufficient closing brackets after parsing the entire input text");
+            System.out.println("Insufficient closing brackets ");
         else
             System.out.println("Brackets are balanced");
     }
