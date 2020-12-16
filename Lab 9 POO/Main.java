@@ -235,7 +235,7 @@ class Main implements ActionListener
         try {
             a=Double.parseDouble(t.getText());
         } catch(Exception invalidInput){
-            errors.setText("Bad input exception");
+            errors.setText("Bad input ");
             a = lastA;
             return false;
         }
@@ -249,6 +249,6 @@ class Main implements ActionListener
         new Main();
         try{
             validate(b);
-        }catch(Exception m){System.out.println("Exception occured:");}
+        }catch(Exception m){System.out.println("Exception: ");}
     }
 }
